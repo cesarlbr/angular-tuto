@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { SuperComponent } from './super/super.component';
 import { LesAmisComponent } from './les-amis/les-amis.component';
 import { UnAmiComponent } from './un-ami/un-ami.component';
+import { DataComponent } from './data/data.component';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { UnAmiComponent } from './un-ami/un-ami.component';
     SuperComponent,
     LesAmisComponent,
     UnAmiComponent,
+    DataComponent
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],

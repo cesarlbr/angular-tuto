@@ -12,4 +12,22 @@ import { Component } from '@angular/core';
   templateUrl: './les-amis.component.html',
   styleUrls: ['./les-amis.component.css'],
 })
-export class LesAmisComponent {}
+export class LesAmisComponent {
+  authorizeAmi: boolean = false;
+  lesAmisCreationStatus: string = 'Aucun ami?';
+  amiMario: string = 'Dr.Mario'
+
+  constructor() {
+    setTimeout(() => {
+      this.authorizeAmi = true;
+    }, 3000);
+  }
+  onCreationAmi() {
+    this.lesAmisCreationStatus = `Ami ajouté ${this.amiMario}`;
+  }
+
+  onUpdateAmiName(e: Event) {
+    this.amiName = (<HTMLInputElement>e.target).value;
+    console.log((<HTMLInputElement>e.target).value);
+  }
+}

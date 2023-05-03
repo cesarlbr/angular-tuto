@@ -12,13 +12,10 @@ import { UnAmiComponent } from './un-ami/un-ami.component';
     AppComponent,
     SuperComponent,
     LesAmisComponent,
-    UnAmiComponent
+    UnAmiComponent,
   ],
-  imports: [
-    BrowserModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

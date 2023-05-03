@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
   template:`
             <div class="un-ami">
               <h5>☺︎Ici c'est un Ami</h5>
+              <h5> ID : {{unAmiId}}</h5>
+              <p>{{unAmiStatus}}</p>
+              <p>{{unAmiTemplate}}</p>
             </div>
            `,
   // ! On peut suppr le fichier css ?
@@ -18,5 +21,7 @@ import { Component } from '@angular/core';
 }`]
 })
 export class UnAmiComponent {
-
+unAmiId:number = 99;
+unAmiStatus: string = 'off';
+unAmiTemplate: string ='<p>LOL</p>'
 }

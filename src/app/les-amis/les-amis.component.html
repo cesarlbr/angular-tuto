@@ -1,5 +1,16 @@
 <div class="les-amis p-3">
-  <h2 class="title-les-amis">La liste des copains : </h2>
+  <h2 class="title-les-amis">La liste des copains :</h2>
+  <button
+    class="btn btn-succes"
+    type="button"
+    [disabled]="!authorizeAmi"
+    (click)="onCreationAmi()"
+  >
+    Ajouter un ami
+  </button>
+  <p>{{ lesAmisCreationStatus }}</p>
+  <input type="text" [(ngModel)]="amiMario" />
+  <p>{{ amiMario }}</p>
   <app-un-ami></app-un-ami>
   <app-un-ami></app-un-ami>
   <app-un-ami></app-un-ami>

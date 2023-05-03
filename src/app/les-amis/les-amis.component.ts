@@ -16,6 +16,7 @@ export class LesAmisComponent {
   authorizeAmi: boolean = false;
   lesAmisCreationStatus: string = 'Aucun ami?';
   amiMario: string = 'Dr.Mario'
+  amiCreated: boolean = false;
 
   constructor() {
     setTimeout(() => {

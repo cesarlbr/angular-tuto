@@ -6,11 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./data.component.css']
 })
 export class DataComponent implements OnInit {
-  photo : any = ''
+  photo : any = './doctor.jpg'
   name : string = 'Dr.Mario'
   age : number = 40
   ageRandom : number = this.numberFetiche(30)
-
+  ageAdd : any = this.age + 10
   constructor() { }
 
   ngOnInit() {

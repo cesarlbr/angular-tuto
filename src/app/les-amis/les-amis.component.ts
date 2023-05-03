@@ -21,10 +21,13 @@ export class LesAmisComponent {
   constructor() {
     setTimeout(() => {
       this.authorizeAmi = true;
-    }, 3000);
+    },);
   }
   onCreationAmi() {
     this.lesAmisCreationStatus = `Ami ajouté ${this.amiMario}`;
+  }
+  onClick(){
+    this.amiCreated = true
   }
 
   onUpdateAmiName(e: Event) {

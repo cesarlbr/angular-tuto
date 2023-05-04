@@ -4,23 +4,18 @@
     class="btn btn-succes"
     type="button"
     [disabled]="!authorizeAmi"
-    (click)="onClick()"
+    (click)="onCreationAmi()"
   >
     Ajouter un ami
   </button>
   <p>{{ lesAmisCreationStatus }}</p>
-  <input type="text" [(ngModel)]="amiMario" />
+  <input type="text" [(ngModel)]="amiName"/>
   <p>{{ amiMario }}</p>
   <p *ngIf="amiCreated ; else noAmi">Un ami  à été crée il s'agit de {{amiMario}}</p>
   <ng-template #noAmi>
     <p>Ne restez pas seul</p>
   </ng-template>
 
-  <app-un-ami></app-un-ami>
-  <app-un-ami></app-un-ami>
-  <app-un-ami></app-un-ami>
-  <app-un-ami></app-un-ami>
-  <app-un-ami></app-un-ami>
-  <app-un-ami></app-un-ami>
+  <app-un-ami *ngFor='let amigo of mesAmis'></app-un-ami>
   <app-data></app-data>
 </div>

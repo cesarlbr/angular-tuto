@@ -15,19 +15,23 @@ import { Component } from '@angular/core';
 export class LesAmisComponent {
   authorizeAmi: boolean = false;
   lesAmisCreationStatus: string = 'Aucun ami?';
-  amiMario: string = 'Dr.Mario'
+  amiName: string = '';
   amiCreated: boolean = false;
+  mesAmis: string[] = ['paul', 'jacques'];
 
   constructor() {
     setTimeout(() => {
       this.authorizeAmi = true;
-    },);
+    });
   }
   onCreationAmi() {
-    this.lesAmisCreationStatus = `Ami ajouté ${this.amiMario}`;
+    // this.lesAmisCreationStatus = `Ami ajouté ${this.amiMario}`;
+    this.amiCreated = true;
+    this.mesAmis.push(this.amiName);
+    console.log(this.mesAmis);
   }
-  onClick(){
-    this.amiCreated = true
+  onClick() {
+    this.amiCreated = true;
   }
 
   onUpdateAmiName(e: Event) {

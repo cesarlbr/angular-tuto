@@ -5,14 +5,9 @@ import { Component } from '@angular/core';
   // ! On peut suppr le fichier html ?
   templateUrl: './un-ami.component.html',
   // ! On peut suppr le fichier css ?
-  // styleUrls: ['./un-ami.component.css']
-  styles: [
-    `
-  .un-ami{
-    color: rgb(0, 255, 217);
-    background-color: rgb(20, 93, 145);
-}`,
-  ],
+  styleUrls: ['./un-ami.component.css']
+  
+
 })
 export class UnAmiComponent {
   unAmiId: number = 99;

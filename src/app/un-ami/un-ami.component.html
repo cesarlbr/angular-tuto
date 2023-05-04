@@ -1,6 +1,6 @@
 <div [ngStyle]="{ backgroundColor: getColor() }">
   <h5>☺︎Ici c'est un Ami</h5>
   <h5>ID : {{ unAmiId }}</h5>
-  <p>{{ unAmiStatus }}</p>
+  <p [ngClass]="{amiOn: unAmiStatus === 'on', amiOff: unAmiStatus === 'off'}">{{ unAmiStatus }}</p>
   <p>{{ unAmiTemplate }}</p>
 </div>
